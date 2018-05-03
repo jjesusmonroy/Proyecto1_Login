@@ -7,7 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  user:any={
+    username:"",
+    password:""
+  }
   constructor(public navCtrl: NavController) {
+
+  }
+
+  succesfullLogin():void{
 
   }
 
