@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<!-- <ion-content padding>
   <ion-list >
        <ion-item>
             <ion-label floating>Username</ion-label> 
@@ -20,4 +20,18 @@
   <div>
     <button primary block ion-button (click)=succesfullLogin()>Ingresar</button>
   </div>
+</ion-content> -->
+
+<ion-content padding>
+  <button ion-button full (click)="loginWithFB()">Login!</button>
+ 
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+    <img [src]="userData.picture" />
+    <ion-card-content>
+      <p>Email: {{ userData.email }}</p>
+      <p>First Name: {{ userData.first_name }}</p>
+    </ion-card-content>
+  </ion-card>
+ 
 </ion-content>
