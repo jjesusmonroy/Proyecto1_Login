@@ -5,6 +5,8 @@ import { AngularFireModule } from 'angularfire2';
 import  firebase  from "firebase";
 import { GooglePlus } from '@ionic-native/google-plus';
 
+import { LoginPage } from "../login/login";
+
 //import { Validators, FormBuilder, FormGroup, FormControl,AbstractControl } from '@angular/forms';
 //import { Validator } from '@angular/forms/src/directives/validators';
 
@@ -48,7 +50,7 @@ export class HomePage {
 
   }
   loginWithGoogle(){
-    this.googlePlus.login({
+    /*this.googlePlus.login({
       'webClientID':'952784663505-k0o2fhrt01hehd5hg5n4flgjom490c8d.apps.googleusercontent.com',
       'ofline':true
     }).then(res=>{
@@ -58,7 +60,8 @@ export class HomePage {
       }).catch(notsuc=>{
         alert("Not Success ")
       })
-    })
+    })*/
+    this.navCtrl.push(LoginPage);
   }
   signup(){}
 

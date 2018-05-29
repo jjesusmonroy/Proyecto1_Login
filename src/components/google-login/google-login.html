@@ -1,0 +1,14 @@
+<!-- Generated template for the GoogleLoginComponent component -->
+<div>
+  
+  <button ion-button ng-if="!user.UID" (tap)="googleLogin()">
+    Login with Google
+  </button>
+
+  <div ng-if="user.UID">
+    You're already logged in with UID : 
+
+  </div>
+  
+
+</div>

@@ -8,8 +8,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import  firebase  from "firebase";
 import { GooglePlus } from '@ionic-native/google-plus'; 
+import { ComponentsModule } from '../components/components.module';
+import { LoginPage } from '../pages/login/login';
 
 export const firebaseConfig={
   apiKey: "AIzaSyCu0w8ldHTdBLZW-iDA4hDXk9REEHyFd_4",
@@ -24,17 +28,21 @@ firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
