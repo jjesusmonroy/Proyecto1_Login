@@ -1,23 +1,13 @@
+
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Login
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  <ion-list >
-       <ion-item>
-            <ion-label floating>Username</ion-label> 
-            <ion-input type="text" [(ngModel)]=user.username></ion-input>
-       </ion-item>
-       <ion-item>
-        <ion-label floating>Password</ion-label> 
-        <ion-input type="password" [(ngModel)]=user.password></ion-input>
-   </ion-item>
-  </ion-list>
-  <div>
-    <button primary block ion-button (click)=succesfullLogin()>Ingresar</button>
-  </div>
+  <ion-label [(ngModel)]="mensaje">hello</ion-label>
 </ion-content>
