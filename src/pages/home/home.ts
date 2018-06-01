@@ -9,7 +9,7 @@ import { AngularFireAuth } from "angularfire2/auth";
 })
 export class HomePage {
 
-  public mensaje : string = '';
+  
   constructor(private afAuth: AngularFireAuth
     , public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -17,10 +17,10 @@ export class HomePage {
   ionViewDidLoad() {
     this.afAuth.authState.subscribe(data => {
       if (data && data.email && data.uid) {
-        this.mensaje = `Bienvenido ${data.email}`;
+        // Que hacer en home si se encontro un usuario data.email tiene el correo del usuario
       }
       else {
-        this.mensaje = `No fue posible encontrar un usuario con ese correo`;
+        //en caso de que no 
       }
     });
   }

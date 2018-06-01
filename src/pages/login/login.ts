@@ -32,4 +32,12 @@ export class LoginPage {
     this.navCtrl.push('RegisterPage');
   }
 
+  loginFacebook(){
+
+  }
+
+  loginWithGoogle(){
+    
+  }
+
 }
