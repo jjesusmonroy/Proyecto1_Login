@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireAuthModule } from "angularfire2/auth";
-
+import { GooglePlus } from "@ionic-native/google-plus";
+import firebase from "firebase";
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from "./app.firebase.config";
 
@@ -26,6 +27,7 @@ import { FIREBASE_CONFIG } from "./app.firebase.config";
   providers: [
     StatusBar,
     SplashScreen,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
