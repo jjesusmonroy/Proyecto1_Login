@@ -1,8 +1,8 @@
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyBBl7beyxAiIMoPf09cNJ-qwWu8jdZxIn8",
-    authDomain: "dam20181-proyectologin.firebaseapp.com",
-    databaseURL: "https://dam20181-proyectologin.firebaseio.com",
-    projectId: "dam20181-proyectologin",
-    storageBucket: "dam20181-proyectologin.appspot.com",
-    messagingSenderId: "1008339185704"
+  apiKey: "AIzaSyDJxWWseDMhCd9C_B1MX-jjVXo2BSyTjEM",
+  authDomain: "damvegaemail.firebaseapp.com",
+  databaseURL: "https://damvegaemail.firebaseio.com",
+  projectId: "damvegaemail",
+  storageBucket: "damvegaemail.appspot.com",
+  messagingSenderId: "433620493367"
   };

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
 import { GooglePlus } from "@ionic-native/google-plus";
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { AngularFireModule } from "angularfire2";
 import firebase from 'firebase';
 
@@ -14,7 +15,9 @@ import firebase from 'firebase';
 export class LoginPage {
 
   user = {} as User;
-  constructor(private afAuth: AngularFireAuth, public googleplus: GooglePlus
+  userData: any;
+
+  constructor(private afAuth: AngularFireAuth, private facebook: Facebook, public googleplus: GooglePlus
     , public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -35,13 +38,13 @@ export class LoginPage {
     this.navCtrl.push('RegisterPage');
   }
 
-  loginFacebook() {
-
+  loginWithFB() {
+    this.navCtrl.push('FacebookPage');
   }
 
   loginWithGoogle() {
     this.googleplus.login({
-      'webClientId': '1008339185704-e5eaa8gko2ip1haer53t5jpko0b3koe7.apps.googleusercontent.com',
+      'webClientId': '433620493367-cttcqh7q1p8bk8nbm8ip23jcg553s5ua.apps.googleusercontent.com',
       'offline': true
     }).then(res => {
       firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))

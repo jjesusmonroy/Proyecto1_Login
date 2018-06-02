@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar color ="primary">
-    <ion-title>Login</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -20,19 +20,33 @@
   </ion-item>
 
   <ion-item>
-    <ion-label floating >Contraseña</ion-label>
+    <ion-label floating>Contraseña</ion-label>
     <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
 
   <button ion-button (click)="login(user)">Ingresar</button>
   <button ion-button color ="light"(click)="register()">Registrar</button>
+
+  
   <div>
-    <button ion-button (click)="loginFacebook()" >FacebookLogin</button> 
+    <button ion-button icon-left (click)="loginWithFB()" block outline>
+      <ion-icon name="logo-facebook"></ion-icon>Iniciar Sesión con Facebook
+    </button>
   </div>
 
   <div>
-    <button ion-button icon-left (click)="loginWithGoogle()" block outline
-    ><ion-icon name="logo-googleplus"></ion-icon>
-    LOGIN WITH GOOGLE</button>
+    <button ion-button icon-left (click)="loginWithGoogle()" block outline>
+      <ion-icon name="logo-googleplus"></ion-icon>Iniciar Sesión con Google+
+    </button>
   </div>
+
+  <!-- <ion-item>
+    <ion-card *ngIf="userData">
+      <ion-card-header>{{ userData.username }}</ion-card-header>
+      <img [src]="userData.picture" />
+      <ion-card-content>
+        <p>Email: {{ userData.email }}</p>
+        <p>First Name: {{ userData.first_name }}</p>
+      </ion-card-content>
+  </ion-item> -->
 </ion-content>
